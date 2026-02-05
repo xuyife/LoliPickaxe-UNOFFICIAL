@@ -13,7 +13,7 @@
     <tr>
         <td rowspan="3" style="text-align: center; vertical-align: middle;">NeoForge</td>
         <td>1.21.1</td>
-        <td><font color="yellow">半成品，有部分功能未完成移植或有较多BUG。目前处于Alpha实验阶段。</font></td>
+        <td><span style="color: yellow; ">半成品，有部分功能未完成移植或有较多BUG。目前处于Alpha实验阶段。</span></td>
     </tr>
     <tr>
     	<td>1.21</td>

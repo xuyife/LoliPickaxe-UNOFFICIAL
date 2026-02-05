@@ -49,4 +49,4 @@
 
 ## 更新日志
 
-详见[更新日志](https://github.com/xuyife/LoliPickaxe-UNOFFICIAL/Changelog.md)
+详见[更新日志](https://github.com/xuyife/LoliPickaxe-UNOFFICIAL/blob/1.21.1NeoForge/Changelog.md)

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "minecraft:misc",
+  "ingredients": [
+    {
+      "item": "lolipickaxe:loli_iron_addon_3"
+    }
+  ],
+  "result": {
+    "id": "lolipickaxe:loli_iron_addon_2",
+    "count": 9
+  }
+}

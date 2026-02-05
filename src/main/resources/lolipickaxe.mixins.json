@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.xuyifei.lolipickaxe.common.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "lolipickaxe.refmap.json",
+  "mixins": [
+    "EntityMixin"
+  ],
+  "client": [
+
+  ],
+  "server": [
+    "EntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

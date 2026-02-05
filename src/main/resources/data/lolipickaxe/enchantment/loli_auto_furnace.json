@@ -1,0 +1,28 @@
+{
+  "description": "自动熔炼",
+  "supported_items": [
+    "lolipickaxe:loli_pickaxe",
+    "minecraft:book"
+  ],
+  "primary_items": [
+    "minecraft:book"
+  ],
+  "weight": 10,
+  "max_level": 1,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 1
+  },
+  "max_cost": {
+    "base": 65,
+    "per_level_above_first": 1
+  },
+  "anvil_cost": 2,
+  "slots": [
+    "mainhand"
+  ],
+  "effects": {},
+  "exclusive_set": [
+    "minecraft:silk_touch"
+  ]
+}

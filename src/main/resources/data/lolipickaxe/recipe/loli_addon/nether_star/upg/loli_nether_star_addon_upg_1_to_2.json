@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "minecraft:misc",
+  "result": {
+    "id": "lolipickaxe:loli_nether_star_addon_2",
+    "count": 1
+  },
+  "pattern": ["###", "###", "###"],
+  "key": {
+    "#": {
+      "item": "lolipickaxe:loli_nether_star_addon_1"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "minecraft:misc",
+  "ingredients": [
+    {
+      "item": "lolipickaxe:loli_diamond_addon_4"
+    }
+  ],
+  "result": {
+    "id": "lolipickaxe:loli_diamond_addon_3",
+    "count": 9
+  }
+}

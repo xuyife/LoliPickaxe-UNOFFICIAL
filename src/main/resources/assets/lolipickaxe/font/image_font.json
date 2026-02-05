@@ -1,0 +1,13 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "lolipickaxe:gui/display_method.png",
+      "ascent": 8,
+      "height": 128,
+      "chars": [
+        "\uE000"
+      ]
+    }
+  ]
+}

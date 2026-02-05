@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "minecraft:misc",
+  "result": {
+    "id": "lolipickaxe:loli_obsidian_addon_0",
+    "count": 1
+  },
+  "pattern": ["XYX", "YXY", "XYX"],
+  "key": {
+    "X": {
+      "item": "minecraft:glass"
+    },
+    "Y" : {
+      "item": "minecraft:obsidian"
+    }
+  }
+}

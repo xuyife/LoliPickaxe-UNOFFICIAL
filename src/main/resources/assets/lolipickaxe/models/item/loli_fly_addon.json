@@ -1,0 +1,6 @@
+{
+  "parent" : "minecraft:item/generated",
+  "textures" : {
+    "layer0" : "lolipickaxe:item/loli_fly_addon"
+  }
+}

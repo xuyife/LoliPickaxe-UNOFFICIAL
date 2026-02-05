@@ -1,0 +1,6 @@
+{
+  "parent" : "minecraft:item/handheld",
+  "textures" : {
+    "layer0" : "lolipickaxe:item/small_loli_pickaxe"
+  }
+}

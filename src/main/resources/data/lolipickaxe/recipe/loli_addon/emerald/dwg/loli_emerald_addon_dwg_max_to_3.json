@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "minecraft:misc",
+  "ingredients": [
+    {
+      "item": "lolipickaxe:loli_emerald_addon_max"
+    }
+  ],
+  "result": {
+    "id": "lolipickaxe:loli_emerald_addon_3",
+    "count": 9
+  }
+}

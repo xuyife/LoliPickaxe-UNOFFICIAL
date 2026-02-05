@@ -1,0 +1,20 @@
+{
+  "type" : "minecraft:crafting_shaped",
+  "category": "minecraft:misc",
+  "result" : {
+    "id" : "lolipickaxe:loli_fly_addon",
+    "count" : 1
+  },
+  "pattern": ["XYX", "YZY", "XYX"],
+  "key": {
+    "X": {
+      "item": "minecraft:nether_star"
+    },
+    "Y": {
+      "item": "lolipickaxe:loli_entity_soul_addon_1"
+    },
+    "Z": {
+      "item": "minecraft:elytra"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "minecraft:misc",
+  "result": {
+    "id": "lolipickaxe:loli_gold_addon_5",
+    "count": 1
+  },
+  "pattern": ["###", "###", "###"],
+  "key": {
+    "#": {
+      "item": "lolipickaxe:loli_gold_addon_4"
+    }
+  }
+}

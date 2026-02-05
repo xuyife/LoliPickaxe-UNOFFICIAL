@@ -1,0 +1,17 @@
+{
+  "type" : "minecraft:crafting_shaped",
+  "category": "minecraft:misc",
+  "result" : {
+    "id" : "lolipickaxe:loli_emerald_addon_0",
+    "count" : 1
+  },
+  "pattern": ["XYX", "YXY", "XYX"],
+  "key": {
+    "X": {
+      "item": "minecraft:emerald"
+    },
+    "Y": {
+      "item" : "minecraft:emerald_block"
+    }
+  }
+}

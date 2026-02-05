@@ -1,0 +1,17 @@
+{
+  "type" : "minecraft:crafting_shaped",
+  "category": "minecraft:misc",
+  "result" : {
+    "id" : "lolipickaxe:loli_lapis_addon_0",
+    "count" : 1
+  },
+  "pattern": ["XYX", "YXY", "XYX"],
+  "key": {
+    "X": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "Y": {
+      "item" : "minecraft:lapis_block"
+    }
+  }
+}

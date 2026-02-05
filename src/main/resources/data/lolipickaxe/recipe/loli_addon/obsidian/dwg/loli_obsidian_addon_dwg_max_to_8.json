@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "minecraft:misc",
+  "ingredients": [
+    {
+      "item": "lolipickaxe:loli_obsidian_addon_max"
+    }
+  ],
+  "result": {
+    "id": "lolipickaxe:loli_obsidian_addon_8",
+    "count": 9
+  }
+}

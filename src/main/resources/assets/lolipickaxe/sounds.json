@@ -1,0 +1,22 @@
+{
+  "loli_success": {
+    "category": "block",
+    "subtitle": "loli_success",
+    "sounds": [
+      {
+        "name": "lolipickaxe:loli_success",
+        "stream": false
+      }
+    ]
+  },
+  "music_disc.lolirecord": {
+    "category": "record",
+    "subtitle": "lolirecord",
+    "sounds": [
+      {
+        "name": "lolipickaxe:lolirecord",
+        "stream": true
+      }
+    ]
+  }
+}

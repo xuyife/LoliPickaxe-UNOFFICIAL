@@ -25,7 +25,7 @@ public class PrimedLoliBuffAttackTNTEntityRenderer extends EntityRenderer<Primed
         this.blockRenderer = context.getBlockRenderDispatcher();
     }
 
-    public void render(PrimedLoliBuffAttackTNTEntity entity, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
+    public void render(PrimedLoliBuffAttackTNTEntity entity, float entityYaw, float partialTicks, PoseStack poseStack, @NotNull MultiBufferSource buffer, int packedLight) {
         poseStack.pushPose();
         poseStack.translate(0.0F, 0.5F, 0.0F);
         int i = entity.getFuse();

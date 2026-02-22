@@ -42,9 +42,9 @@ public class LoliBuffAttackTNT extends Block {
     public static final BooleanProperty EXIT = BooleanProperty.create("exit");
     public static final BooleanProperty FAIL_RESPOND = BooleanProperty.create("fail_respond");
 
-    private boolean blueScreen;
-    private boolean exit;
-    private boolean failRespond;
+    private final boolean blueScreen;
+    private final boolean exit;
+    private final boolean failRespond;
 
     @Override
     protected @NotNull MapCodec<? extends Block> codec() {
@@ -135,7 +135,7 @@ public class LoliBuffAttackTNT extends Block {
     }
 
     @Override
-    protected void onProjectileHit(Level level, BlockState state, BlockHitResult hit, Projectile projectile) {
+    protected void onProjectileHit(Level level, @NotNull BlockState state, @NotNull BlockHitResult hit, @NotNull Projectile projectile) {
         if (!level.isClientSide()) {
             BlockPos blockpos = hit.getBlockPos();
             Entity entity = projectile.getOwner();

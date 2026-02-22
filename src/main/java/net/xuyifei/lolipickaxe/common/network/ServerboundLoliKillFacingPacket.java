@@ -36,7 +36,6 @@ public record ServerboundLoliKillFacingPacket() implements CustomPacketPayload {
         context.enqueueWork(() -> {
             ServerPlayer player = (ServerPlayer) context.player();
             LoliPickaxeUtil.killFacing(player);
-            BlockPos pos = player.blockPosition();
             CommonUtil.playLoliSuccessSound(player);
         });
     }

@@ -6,10 +6,13 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.SpawnEggItem;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.RegisterEvent;
 import net.xuyifei.lolipickaxe.LoliPickaxe;
+import net.xuyifei.lolipickaxe.common.entity.ModEntities;
 import net.xuyifei.lolipickaxe.common.registry.custom.*;
 
 import java.util.List;
@@ -131,6 +134,16 @@ public class ModItems {
 
 
     public static final Supplier<Item> LOLI_DISPERSAL = ITEMS.register("loli_dispersal", () -> new LoliDispersal(new Item.Properties()));
+
+
+    public static final Supplier<Item> LOLI_BLUE_SCREEN_TNT = ITEMS.register("loli_blue_screen_tnt", () -> new BlockItem(ModBlocks.LOLI_BLUE_SCREEN_TNT.get(), new Item.Properties()));
+
+    public static final Supplier<Item> LOLI_EXIT_TNT = ITEMS.register("loli_exit_tnt", () -> new BlockItem(ModBlocks.LOLI_EXIT_TNT.get(), new Item.Properties()));
+
+    public static final Supplier<Item> LOLI_FAIL_RESPOND_TNT = ITEMS.register("loli_fail_respond_tnt", () -> new BlockItem(ModBlocks.LOLI_FAIL_RESPOND_TNT.get(), new Item.Properties()));
+
+
+    public static final Supplier<Item> LOLI_SPAWN_EGG = ITEMS.register("loli_spawn_egg", () -> new DeferredSpawnEggItem(ModEntities.LOLI_ENTITY, 0xFFFFFF, 0x000000, new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

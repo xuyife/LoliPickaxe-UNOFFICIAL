@@ -5,7 +5,8 @@
   "compatibilityLevel": "JAVA_21",
   "refmap": "lolipickaxe.refmap.json",
   "mixins": [
-    "EntityMixin"
+    "EntityMixin",
+    "EMCMappingHandlerMixin"
   ],
   "client": [
 

@@ -1,6 +1,5 @@
 package net.xuyifei.lolipickaxe.common.event;
 
-import com.google.common.collect.Sets;
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.ChatFormatting;
@@ -10,7 +9,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -35,6 +33,7 @@ import net.neoforged.neoforge.event.entity.item.ItemTossEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingKnockBackEvent;
+import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
@@ -42,7 +41,6 @@ import net.xuyifei.lolipickaxe.common.config.ConfigLoader;
 import net.xuyifei.lolipickaxe.common.network.ServerboundLoliKillFacingPacket;
 import net.xuyifei.lolipickaxe.common.network.ServerboundLoliLeftClickPacket;
 import net.xuyifei.lolipickaxe.common.registry.ModConfigs;
-import net.xuyifei.lolipickaxe.common.registry.ModDamageSources;
 import net.xuyifei.lolipickaxe.common.registry.ModItems;
 import net.xuyifei.lolipickaxe.common.registry.custom.LoliPickaxe;
 import net.xuyifei.lolipickaxe.common.registry.custom.SmallLoliPickaxe;
@@ -52,6 +50,7 @@ import net.xuyifei.lolipickaxe.common.util.RomanNumberUtil;
 
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -72,7 +71,7 @@ public class LoliPickaxeEvents {
             MobEffects.LEVITATION,
             MobEffects.DARKNESS
     );
-    public static Set<Class<? extends Entity>> antiEntity = Sets.newHashSet();
+    public static final Set<Class<? extends Entity>> antiEntity = ConcurrentHashMap.newKeySet();
     private static final Pattern STRING_ENCHANTMENT_PATTERN = Pattern.compile("enchantment\\.level\\.(\\d+)$");
     private static int tick = 0;
     private static int curColor = 0;
@@ -123,7 +122,22 @@ public class LoliPickaxeEvents {
                 ((LocalPlayer) player).connection.send(new ServerboundLoliLeftClickPacket(blockPos, player.getMainHandItem()));
             }
         }
+    }
 
+    @SubscribeEvent
+    public static void onPlayerAttack(AttackEntityEvent event) {
+        Player player = event.getEntity();
+        if (player.getMainHandItem().getItem() instanceof LoliPickaxe) {
+            if (event.getTarget() instanceof Player targetPlayer) {
+                for (int i = 0; i < targetPlayer.getInventory().getContainerSize(); i++) {
+                    ItemStack stack = targetPlayer.getInventory().getItem(i);
+                    if (stack.getItem() instanceof LoliPickaxe) {
+                        return;
+                    }
+                }
+            }
+            LoliPickaxeUtil.kill(event.getTarget(), player);
+        }
     }
 
     @SubscribeEvent
@@ -282,10 +296,14 @@ public class LoliPickaxeEvents {
     @SubscribeEvent
     public static void onEntityJoinLevel(EntityJoinLevelEvent event) {
         Entity entity = event.getEntity();
-        for (Class<? extends Entity> clazz : antiEntity) {
-            if (clazz.isInstance(entity)) {
-                event.setCanceled(true);
-                return;
+        synchronized (antiEntity) {
+            if (!antiEntity.isEmpty()) {
+                for (Class<? extends Entity> clazz : antiEntity) {
+                    if (clazz.isInstance(entity)) {
+                        event.setCanceled(true);
+                        return;
+                    }
+                }
             }
         }
     }

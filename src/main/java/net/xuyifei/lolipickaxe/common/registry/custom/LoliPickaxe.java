@@ -9,18 +9,13 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.protocol.game.ClientboundSoundPacket;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ExperienceOrb;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
@@ -47,7 +42,6 @@ import net.xuyifei.lolipickaxe.common.gui.ILoliInventory;
 import net.xuyifei.lolipickaxe.common.gui.InventoryLoliPickaxe;
 import net.xuyifei.lolipickaxe.common.registry.ModConfigs;
 import net.xuyifei.lolipickaxe.common.registry.ModDataComponents;
-import net.xuyifei.lolipickaxe.common.registry.ModSounds;
 import net.xuyifei.lolipickaxe.common.registry.tool.IContainer;
 import net.xuyifei.lolipickaxe.common.util.CommonUtil;
 import net.xuyifei.lolipickaxe.common.util.LoliPickaxeUtil;
@@ -63,35 +57,17 @@ public class LoliPickaxe extends Item implements IContainer {
                         .rarity(Rarity.EPIC)
                         .stacksTo(1)
                         .fireResistant()
-                        .component(ModDataComponents.LOLI_CONFIG.get(), CustomData.of(new CompoundTag()))
+                        .component(ModDataComponents.LOLI_CONFIG.get(), CustomData.EMPTY)
         );
     }
 
     public LoliPickaxe() {
-        super(
-                new Properties()
-                        .rarity(Rarity.EPIC)
-                        .stacksTo(1)
-                        .fireResistant()
-                        .component(ModDataComponents.LOLI_CONFIG.get(), CustomData.of(new CompoundTag()))
-        );
+        this(new Properties());
     }
 
     public void onLeftClick(Level level, Player player, BlockPos clickedPos) {
         if (!level.isClientSide()) {
-            if (player instanceof ServerPlayer serverPlayer) {
-                serverPlayer.server.execute(() -> {
-                    BlockPos pos = serverPlayer.blockPosition();
-
-                    serverPlayer.connection.send(new ClientboundSoundPacket(
-                            Holder.direct(ModSounds.LOLI_SUCCESS.get()),
-                            SoundSource.BLOCKS,
-                            pos.getX(), pos.getY(), pos.getZ(),
-                            1.0F, 1.0F,
-                            serverPlayer.getRandom().nextLong()
-                    ));
-                });
-            }
+            CommonUtil.playLoliSuccessSound(player);
             destroyBlock(level, clickedPos, player);
         }
     }
@@ -315,16 +291,6 @@ public class LoliPickaxe extends Item implements IContainer {
             }
         }
         return InteractionResultHolder.pass(itemStack);
-    }
-
-    @Override
-    public boolean hurtEnemy(@NotNull ItemStack stack, LivingEntity target, @NotNull LivingEntity attacker) {
-        if (!target.level().isClientSide() && target.level() instanceof ServerLevel) {
-            LoliPickaxeUtil.kill(target, attacker);
-
-            stack.hurtAndBreak(0, attacker, EquipmentSlot.MAINHAND);
-        }
-        return true;
     }
 
     @Override

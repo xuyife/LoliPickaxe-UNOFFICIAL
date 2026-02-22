@@ -22,7 +22,6 @@ public class ModDamageSources {
         );
     }
 
-    // 添加静态工厂方法
     public static DamageSource createLoliDamage(Level level, Entity attacker) {
         return new DamageSource(
                 level.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE)

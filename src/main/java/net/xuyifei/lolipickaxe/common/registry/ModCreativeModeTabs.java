@@ -28,7 +28,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.LOLI_CARD_ALBUM.get());
                         output.accept(ModItems.LOLI_CARD_ONLINE.get());
                         output.accept(ModItems.LOLI_RECORD.get());
-
+                        output.accept(ModItems.LOLI_BLUE_SCREEN_TNT.get());
+                        output.accept(ModItems.LOLI_EXIT_TNT.get());
+                        output.accept(ModItems.LOLI_FAIL_RESPOND_TNT.get());
+                        output.accept(ModItems.LOLI_ALTAR.get());
+                        output.accept(ModItems.LOLI_SPAWN_EGG.get());
                     })
                     .build());
 

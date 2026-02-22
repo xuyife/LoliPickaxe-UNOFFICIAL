@@ -4,20 +4,58 @@
 
 ### 0.1.0-alpha+neoforge.1.21.1
 
-<font color="red">**警告：此版本为Alpha实验版，存在大量BUG和未完成部分，不建议在生产环境或主要存档中使用。**</font>
+<div style="color: red; font-weight: bold;">警告：此版本为Alpha实验版，存在大量BUG和未完成部分，不建议在生产环境或主要存档中使用。</div>
 
 #### 已知BUG：
 
-暂无
+1.萝莉模型在切换为“纳文摩尔”时会出现BUG
 
 #### 未完成：
 
-1.跟ProjectE的联动。
+~~1.跟ProjectE的联动。~~（已于0.2.0-alpha+neoforge.1.21.1版本完成）
 
-2.特效炸弹。
+~~2.特效炸弹。~~（已于0.2.0-alpha+neoforge.1.21.1版本完成）
 
-3.loliAttack指令。
+~~3.loliAttack指令。~~（已于0.2.0-alpha+neoforge.1.21.1版本完成）
 
 #### TODO：
 
-1.完成未完成部分
+~~1.完成未完成部分~~（已于0.2.0-alpha+neoforge.1.21.1版本完成）
+
+------
+
+### 0.2.0-alpha+neoforge.1.21.1
+
+<div style="color: red; font-weight: bold;">警告：此版本为Alpha实验版，存在大量BUG和未完成部分，不建议在生产环境或主要存档中使用。</div>
+
+#### 修改：
+
+1.添加了特效炸弹
+
+2.在创造模式物品栏中添加了萝莉祭坛
+
+3.添加了萝莉祭坛的配方
+
+4.完成了跟ProjectE的联动
+
+5.完成了loliAttack指令
+
+6.更改了loli指令的权限等级（现为3）
+
+7.在JEI/EMI中添加了装满升级的普通萝莉
+
+8.添加了萝莉的刷怪蛋
+
+9.优化部分代码
+
+#### 已知BUG：
+
+1.萝莉模型在切换为“纳文摩尔”时会出现BUG（0.1.0-alpha+neoforge.1.21.1版本遗留BUG）
+
+#### 未完成：
+
+暂无
+
+#### TODO：
+
+待定

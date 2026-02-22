@@ -18,6 +18,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.common.util.FakePlayer;
 import net.xuyifei.lolipickaxe.common.config.ConfigLoader;
+import net.xuyifei.lolipickaxe.common.entity.EntityLoli;
 import net.xuyifei.lolipickaxe.common.event.LoliPickaxeEvents;
 import net.xuyifei.lolipickaxe.common.event.LoliTickEvent;
 import net.xuyifei.lolipickaxe.common.network.ClientboundLoliDeadPacket;
@@ -39,6 +40,9 @@ public class LoliPickaxeUtil {
     }
 
     public static void kill(Entity entity, LivingEntity source) {
+        if (entity instanceof EntityLoli) {
+            return;
+        }
         if (entity instanceof Player) {
             killPlayer((Player) entity, source);
         } else if (entity instanceof LivingEntity) {

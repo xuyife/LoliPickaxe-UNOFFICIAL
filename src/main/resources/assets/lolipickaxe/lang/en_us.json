@@ -20,6 +20,7 @@
   "item.lolipickaxe.loli_card_online": "萝莉网络卡片",
   "item.lolipickaxe.loli_record": "萝莉唱片",
   "item.lolipickaxe.loli_dispersal": "§c萝莉退散!",
+  "item.lolipickaxe.loli_spawn_egg": "萝莉刷怪蛋",
   "item.lolipickaxe.loliMaterialFormat": "%2$s%1$s",
   "item.lolipickaxe.loliMaterial.recipe": "九个%1$s升级合成一个%2$s升级,共%3$s",
   "item.lolipickaxe.loliMaterial.0": "一级",
@@ -35,6 +36,11 @@
   "item.lolipickaxe.loliMaterial.end": "终极",
 
   "block.lolipickaxe.loli_altar": "萝莉祭坛",
+  "block.lolipickaxe.loli_blue_screen_tnt": "§c蓝屏炸弹",
+  "block.lolipickaxe.loli_exit_tnt": "§c蹦溃炸弹",
+  "block.lolipickaxe.loli_fail_respond_tnt": "§c未响应炸弹",
+
+  "entity.lolipickaxe.loli_entity": "萝莉",
 
   "key.category.lolipickaxe": "§c氪金萝莉",
   "key.lolipickaxe.loli_config": "配置§c氪金萝莉",
@@ -111,5 +117,8 @@
   "enchantment.level.16": "XVI",
   "enchantment.level.32": "XXXII",
 
-  "jukebox_song.loli_pickaxe.lolirecord": "ばか変態煩い(av6752335)"
+  "jukebox_song.loli_pickaxe.lolirecord": "ばか変態煩い(av6752335)",
+
+  "buffAttackTNT.enable": "已启用特效攻击",
+  "buffAttackTNT.disable": "未启用特效攻击"
 }

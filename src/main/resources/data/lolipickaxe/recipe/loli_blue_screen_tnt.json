@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "minecraft:misc",
+  "result": {
+    "id": "lolipickaxe:loli_blue_screen_tnt",
+    "count": 1
+  },
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:tnt"
+    }
+  }
+}

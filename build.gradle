@@ -33,6 +33,10 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+    maven {
+        name = "TerraformersMC"
+        url = "https://maven.terraformersmc.com/"
+    }
 }
 
 base {
@@ -140,6 +144,13 @@ dependencies {
     implementation 'curse.maven:geckolib-388172:7415496-sources-7415496'
 
     implementation 'curse.maven:allthemodium-364466:7468993-sources-7468993'
+
+    implementation 'curse.maven:projecte-226410:6611984-sources-6611984'
+
+    // compile against the JEI API but do not include it at runtime
+    compileOnly("mezz.jei:jei-1.21-neoforge-api:19.8.2.99")
+    // at runtime, use the full JEI jar for NeoForge
+    runtimeOnly("mezz.jei:jei-1.21-neoforge:19.8.2.99")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

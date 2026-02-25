@@ -1,7 +1,7 @@
 
 # LoliPickaxe UNOFFICIAL（氪金萝莉非官方重置版）
 > [!IMPORTANT]
-> 氪金萝莉（LoliPickaxe）的非官方重置版，已获得作者许可。原始模组版权归 @IslenautsGK（GitHub）所有。
+> $\color{#FF0000}{\text{氪金萝莉（LoliPickaxe）的非官方重置版，已获得作者许可。原始模组版权归 @IslenautsGK（GitHub）所有。}}$
 
 ## 移植计划
 
@@ -14,7 +14,7 @@
     <tr>
         <td rowspan="3" style="text-align: center; vertical-align: middle;">NeoForge</td>
         <td>1.21.1</td>
-        <td><strong>$\color{#FFFF00}{\text{半成品，有部分功能未完成移植或有较多BUG。目前处于Alpha实验阶段。}}$</strong></td>
+        <td><strong>$\color{#FFD700}{\text{半成品，有部分功能未完成移植或有较多BUG。目前处于Alpha实验阶段。}}$</strong></td>
     </tr>
     <tr>
     	<td>1.21</td>

@@ -4,7 +4,7 @@
 
 ### 0.1.0-alpha+neoforge.1.21.1
 
-<div style="color: red; font-weight: bold;">警告：此版本为Alpha实验版，存在大量BUG和未完成部分，不建议在生产环境或主要存档中使用。</div>
+$\color{#FF0000}{\text{警告：此版本为Alpha实验版，存在大量BUG和未完成部分，不建议在生产环境或主要存档中使用。}}$
 
 #### 已知BUG：
 
@@ -26,7 +26,7 @@
 
 ### 0.2.0-alpha+neoforge.1.21.1
 
-<div style="color: red; font-weight: bold;">警告：此版本为Alpha实验版，存在大量BUG和未完成部分，不建议在生产环境或主要存档中使用。</div>
+$\color{#FF0000}{\text{警告：此版本为Alpha实验版，存在大量BUG和未完成部分，不建议在生产环境或主要存档中使用。}}$
 
 #### 修改：
 
@@ -58,4 +58,4 @@
 
 #### TODO：
 
-待定
+1.修复“萝莉模型在切换为“纳文摩尔”时会出现BUG”

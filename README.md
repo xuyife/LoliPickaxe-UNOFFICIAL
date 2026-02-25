@@ -1,6 +1,7 @@
 
 # LoliPickaxe UNOFFICIAL（氪金萝莉非官方重置版）
-<div style="color: red; font-weight: bold;">氪金萝莉（LoliPickaxe）的非官方重置版，已获得作者许可。原始模组版权归 @IslenautsGK（GitHub）所有。</div>
+> [!IMPORTANT]
+> 氪金萝莉（LoliPickaxe）的非官方重置版，已获得作者许可。原始模组版权归 @IslenautsGK（GitHub）所有。
 
 ## 移植计划
 
